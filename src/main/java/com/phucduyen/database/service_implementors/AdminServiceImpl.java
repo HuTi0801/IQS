@@ -31,4 +31,9 @@ public class AdminServiceImpl implements AdminService {
         });
         return accountResponseList;
     }
+
+    @Override
+    public List<AccountResponse> viewAccount(Integer id) {
+        return null;
+    }
 }

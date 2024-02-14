@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface AdminService {
     List<AccountResponse> getAll();
+
+    List<AccountResponse> viewAccount(Integer id);
 }
