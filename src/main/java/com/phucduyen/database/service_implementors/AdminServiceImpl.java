@@ -34,6 +34,17 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public List<AccountResponse> viewAccount(Integer id) {
-        return null;
+        List<Account> accountList = accountRepo.findAll();
+        List<AccountResponse> accountResponseList = new ArrayList<>();
+        accountList.forEach(account -> {
+            if(account.getId().equals(id)){
+                accountResponseList.add(AccountResponse.builder()
+                                .id(account.getId())
+                                .email(account.getEmail())
+                                .role(account.getRole().name())
+                        .build());
+            }
+        });
+        return accountResponseList;
     }
 }

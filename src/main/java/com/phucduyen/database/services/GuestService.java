@@ -1,8 +1,10 @@
 package com.phucduyen.database.services;
 
 import com.phucduyen.database.models.entity_models.Account;
+import com.phucduyen.database.models.request_models.AccountRequest;
+import com.phucduyen.database.models.request_models.GuestRequest;
 
 public interface GuestService {
-    Account registerAccount(String email, String phoneNumb);
+    boolean registerAccount(GuestRequest accountRequest);
 }
 
